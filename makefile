@@ -8,7 +8,6 @@ all: myprog
 myprog: main.o function.o
 	gcc -o bot1 main.o function.o
 
-
 function.o: function.h function.c
 	gcc -o function.o -c function.c -W -Wall -ansi -pedantic -std=c99
 

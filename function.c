@@ -22,15 +22,13 @@ int generateMatAdj_SHM(key_t key) {
         exit(EXIT_FAILURE);
     }
     printf("Genere SHM id: %d\n", shm);
-    return shm;
-}
 
-void bindMatAdj_SHM(int shm) {
     // attachement du segment shm sur le pointeur *chaine
     if ((adjM = shmat(shm, NULL, SHM_RDONLY)) == (void *) -1) {
         perror("shmat");
         exit(EXIT_FAILURE);
     }
+    return shm;
 }
 
 int getMatAdj_SHM(int row, int column, int rowMax) {

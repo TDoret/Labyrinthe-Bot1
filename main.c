@@ -21,7 +21,6 @@ int main() {
 
     printf("%s\n", "Début Programme");
     shm = generateMatAdj_SHM(key);
-    bindMatAdj_SHM(shm);
     sem = generateSem(key);
 
 

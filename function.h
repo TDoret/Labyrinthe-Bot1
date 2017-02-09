@@ -10,8 +10,6 @@ void setMatAdj_SHM(int value, int row, int column, int rowMax);
 
 int getMatAdj_SHM(int row, int column, int rowMax);
 
-void bindIntTabInSHM(int shm);
-
 void destroyMatAdj_SHM(int shm);
 
 int generateSem(key_t key);
