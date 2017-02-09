@@ -1,5 +1,6 @@
 #ifndef FUNCTION_H_INCLUDED
 #define FUNCTION_H_INCLUDED
+#include "pile.h"
 
 /*Definition des fonctions du programme*/
 int generateMatAdj_SHM(key_t key);
@@ -17,5 +18,9 @@ int generateSem(key_t key);
 int P(int semId);
 
 int V(int semId);
+
+int isEqualCoord(Coord coordA, Coord coordB);
+
+int ResolveMaze(Coord dep, Coord arr, int ligMax, int colMax, int sem);
 
 #endif /* FUNCTION_H_INCLUDED */

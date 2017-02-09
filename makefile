@@ -5,13 +5,17 @@
 
 all: myprog
 
-myprog: main.o function.o
-	gcc -o bot1 main.o function.o
+myprog: main.o function.o pile.o
+	gcc -o bot1 main.o function.o pile.o
 
-function.o: function.h function.c
+
+function.o: function.h function.c pile.h
 	gcc -o function.o -c function.c -W -Wall -ansi -pedantic -std=c99
 
-main.o: main.c function.h
+pile.o: pile.h pile.c 
+	gcc -o pile.o -c pile.c -W -Wall -ansi -pedantic -std=c99
+
+main.o: main.c function.h pile.h
 	gcc -o main.o -c main.c -W -Wall -ansi -pedantic -std=c99
 
 clean:
